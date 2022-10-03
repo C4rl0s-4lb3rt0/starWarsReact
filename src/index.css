@@ -5,9 +5,242 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #010102;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+h1{
+  text-align: center;
+  color: white;
+  font-size: 4rem;
+}
+h3{
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.favorite{
+  outline: 10px solid #a0a485;
+}
+.notFavorite{
+
+  outline: 1px solid #25484f;
+}
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* From uiverse.io by @alexruix */
+.card {
+  width: 40%;
+  height: 20vh;
+  position: relative;
+  outline: .5em solid #28333c;
+  background: #25484f;
+  background: linear-gradient(to top, #25484f 0%, #34796a 100%);
+  transition: .8s;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+
+ 
+}
+.card .favorite{
+  transition: .8s;
+  background: linear-gradient(to top, #a0a485 0%, #ecf1c1 100%);
+ 
+  height: 100%;
+
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+
+}
+.card .notFavorite{
+ 
+  padding: 20px;
+  height: 100%;
+
+  position: relative;
+  outline: .5em solid #28333c;
+  background: #25484f;
+  background: linear-gradient(to top, #25484f 0%, #34796a 100%);
+  transition: .8s;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+
+
+}
+ 
+
+ 
+ .card h3{
+   color: #111;
+   text-align: left;
+   margin-top: 0;
+ }
+ .card-info {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  padding: 1.5em;
+  text-align: center;
+  transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+ }
+ 
+ .card-bio {
+  padding: 1.8em;
+  text-align: center;
+  transform: translate(100%,40%);
+  transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+ }
+ 
+ .card-bio p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5em;
+ }
+ 
+ 
+ /*Text*/
+ .title {
+  font-size: 1.3em;
+  font-weight: bold;
+ }
+ 
+ .title::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  margin: 0 auto 4%;
+  background-color: #000;
+ }
+ 
+ .subtitle {
+  font-weight: 400;
+  line-height: 1em;
+ }
+ 
+ 
+ 
+ /*Hover*/
+ .card:hover::before {
+  background-color: rgba(80, 64, 44, 0.25);
+ }
+ 
+ .card:hover .card-info {
+  transform: translateX(-100%);
+ }
+ 
+ .card:hover .card-bio {
+  transform: translate(0,40%);
+  opacity: 1;
+ }
+ 
+ 
+ 
+
+
+
+ /* From uiverse.io by @nikk7007 */
+button {
+  padding: 0.8em 1.8em;
+  border: 2px solid #010102;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #010102;
+  cursor: pointer;
+ }
+ 
+ button::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #a0a485;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+ }
+ 
+ button:hover::before {
+  width: 105%;
+ }
+ 
+ button:hover {
+  color: #111;
+ }
+ 
+
+
+ /* From uiverse.io by @barisdogansutcu */
+a.link {
+  padding: 17px 40px;
+  border-radius: 50px;
+  border: 0;
+  background-color: #a0a485;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all .5s ease;
+  text-decoration: none;
+  margin-left: 2rem;
+  position: fixed;
+ }
+ 
+ a.link:hover {
+  letter-spacing: 3px;
+  background-color: #a0a485;
+  color: #010102;
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+ }
+ 
+ a.link:active {
+  letter-spacing: 3px;
+  background-color: #a0a485;
+  color: #010102;
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+ }
+
+
+ @media (max-width: 576px) {
+  .card {
+    width: 60%;
+    height: 25vh;
+  }
+
+
+  a.link {
+    position: absolute;
+
+  }
+ 
+
 }
